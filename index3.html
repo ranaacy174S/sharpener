@@ -40,10 +40,24 @@
     test2[0]. style.color  =  "green";
     var test3 = document.getElementsByClassName("list-group-item");
     test3[2].style.background = "green";
-    var test4 = document.getElementsByClassName("list-group");
-    test4[0].style.fontWeight  = "bold"
+  var test4 = document.getElementsByClassName("list-group");
+   test4[0].style.fontWeight  = "bold"
+//first part of the  question
+   var selector  = document.querySelector('.list-group-item:nth-child(2)');
+     selector.style.background  = "green";
+      var selector3  = document.querySelector('.list-group-item:nth-child(3)');
+     selector3.style.display  = 'none'
+        
+// second part  
+  var secall   = document.querySelectorAll('.list-group-item');
+    secall[1].style.color  =' green';
+var n    = document.querySelectorAll("items").length;
 
-    
+var  odd = document.querySelectorAll('li:nth-child(odd)');
+for(var i =0 ;i<odd.length;i++){
+  odd[i].style.color  = 'red';
+}
+  
 
 </script>
 </body>
