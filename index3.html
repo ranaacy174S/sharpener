@@ -23,21 +23,41 @@
     <h2 class="title">Items</h2>
     <ul id="items" class="list-group">
       <li class="list-group-item">Item 1</li>
+  
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
-      <li class="done">Item 5</li>
     </ul>
+    <h4></h4>
    </div>
   </div>
-<script>
- 
-  var doe = document.getElementsByTagName('li');
-  doe[4].textContent  = "list done"
+ <script>
+  // var listitem   = document.querySelector('#items');
+  // console.log(listitem.parentNode);
+  // listitem.parentNode.style.background = "orange";
+  
+   var listitem   = document.querySelector('#items');
+  //   console.log(listitem.parentElement);
+  //   listitem.parentElement.style.background = " green"
+    // console.log(listitem.lastElementChild);
+        console.log(listitem.firstChild);
+   listitem.firstElementChild.textContent = "do it"
+   listitem.lastElementChild.textContent = "do it"
+    console.log(listitem.nextSibling);
+     console.log(listitem.nextElementSibling);
+    console.log(listitem.previousSibling);
+    console.log(listitem.previousElementSibling);
 
-  var iff = document.getElementsByClassName('done');
-      iff[0].textContent =' be be';
-     
-</script>
+    var newelement  = document.createElement('div');
+    
+     newelement.id = "front"
+     newelement.className = "list of  front";
+     newelement.setAttribute('title','awesome');
+
+     var text2= document.createTextNode('hello sharpener');
+     newelement.appendChild(text2);
+     console.log(newelement);
+
+ </script>
 </body>
-</html>
+</html
