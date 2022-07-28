@@ -16,48 +16,23 @@
   <div class="container">
    <div id="main" class="card card-body">
     <h2 class="title">Add Items</h2>
-    <form class="form-inline mb-3">
-      <input type="text" class="form-control mr-2">
+    <form id ="addform" class="form-inline mb-3">
+      <input type="text" class="form-control mr-2" id="item">
       <input type="submit" class="btn btn-dark" value="Submit">
     </form>
     <h2 class="title">Items</h2>
     <ul id="items" class="list-group">
-      <li class="list-group-item">Item 1</li>
-  
-      <li class="list-group-item">Item 2</li>
-      <li class="list-group-item">Item 3</li>
-      <li class="list-group-item">Item 4</li>
+      <li class="list-group-item">Item 1 <button  class = "btn btn-sm float-right edit">Edit</button ></button><button class="btn btn-danger btn-sm float-right delete">X</button></li>
+      <li class="list-group-item">Item 2 <button  class = "btn btn-sm float-right edit">Edit</button ><button class="btn btn-danger btn-sm float-right delete">X</button></li>
+      <li class="list-group-item">Item 3 <button  class = "btn btn-sm float-right edit">Edit</button ><button class="btn btn-danger btn-sm float-right delete">X</button></li>
+      <li class="list-group-item">Item 4 <button  class = "btn btn-sm float-right edit">Edit</button ><button class="btn btn-danger btn-sm float-right delete">X</button></li>
     </ul>
-    <h4></h4>
+  
    </div>
   </div>
- <script>
-  // var listitem   = document.querySelector('#items');
-  // console.log(listitem.parentNode);
-  // listitem.parentNode.style.background = "orange";
-  
-   var listitem   = document.querySelector('#items');
-  //   console.log(listitem.parentElement);
-  //   listitem.parentElement.style.background = " green"
-    // console.log(listitem.lastElementChild);
-        console.log(listitem.firstChild);
-   listitem.firstElementChild.textContent = "do it"
-   listitem.lastElementChild.textContent = "do it"
-    console.log(listitem.nextSibling);
-     console.log(listitem.nextElementSibling);
-    console.log(listitem.previousSibling);
-    console.log(listitem.previousElementSibling);
-
-    var newelement  = document.createElement('div');
-    
-     newelement.id = "front"
-     newelement.className = "list of  front";
-     newelement.setAttribute('title','awesome');
-
-     var text2= document.createTextNode('hello sharpener');
-     newelement.appendChild(text2);
-     console.log(newelement);
+ <script src  = 'main.js'>
 
  </script>
+
 </body>
 </html
