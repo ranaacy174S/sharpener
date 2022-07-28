@@ -17,6 +17,11 @@ function addItem(e){
   deleteBtn.appendChild(document.createTextNode('X'));
   li.appendChild(deleteBtn);
   itemList.appendChild(li);
+  var editbutton  = document.createElement('button');
+  editbutton.className  = 'btn btn-sm float-right edit';
+  editbutton.appendChild(document.createTextNode('Edit'));
+  li.appendChild(editbutton);
+  itemList.appendChild(li);
 }
 // Remove item
 function removeItem(e){
