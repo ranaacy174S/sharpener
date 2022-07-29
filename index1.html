@@ -33,9 +33,23 @@
 <div id="myDiv">This is an example div.</div>
     </section>
     
-  
-    </script>
+ <script>
+  var form = document.getElementById('my-form');
 
-    <script src="main.js"></script>
+form.addEventListener('submit',details);
+
+function details(e){
+   e.preventDefault();
+   var usern = document.getElementById('name').value;
+   var  email2 = document.getElementById('email').value;
+
+   localStorage.setItem('username', usern);
+   localStorage.setItem('Email', email2);
+}
+
+  
+ 
+ 
+ </script>
   </body>
 </html>
