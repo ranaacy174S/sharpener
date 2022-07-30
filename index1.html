@@ -23,18 +23,24 @@
         <div>
           <label for="email">Email:</label>
           <input type="text" id="email">
-        </div>
+       
         <input class="btn" type="submit" value="Submit">
+       
       </form>
+      <ul id="items" class="list-group">
+        <li class="list-group-item"> User details</li>
+      </ul>
 
       
 <p id="myP">hello</p>
 <p id="myP2">sharpener</p>
 <div id="myDiv">This is an example div.</div>
     </section>
+  
     
  <script>
   var form = document.getElementById('my-form');
+  var itemlist  = document.getElementById('items');
 
 form.addEventListener('submit',details);
 
@@ -42,9 +48,23 @@ function details(e){
    e.preventDefault();
    var usern = document.getElementById('name').value;
    var  email2 = document.getElementById('email').value;
-
-   localStorage.setItem('username', usern);
-   localStorage.setItem('Email', email2);
+      
+    var obj = {
+       usern:usern,
+       email2:email2,
+     }
+     localStorage.setItem(usern,JSON.stringify(obj));  
+     var newItem1 = document.getElementById('name').value;
+     var li1  = document.createElement('li');
+     li1.className  = 'list-group-item';
+     li1.appendChild(document.createTextNode(newItem1));
+  itemlist.appendChild(li1);
+  var newItem = document.getElementById('email').value;
+  var li = document.createElement('li');
+  li.className = 'list-group-item';
+  
+  li.appendChild(document.createTextNode(newItem));
+  itemlist.appendChild(li);
 }
 
   
