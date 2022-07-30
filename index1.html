@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JS For Beginners</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
   </head>
   <body>
     <header>
@@ -29,19 +30,17 @@
       </form>
       <ul id="items" class="list-group">
         <li class="list-group-item"> User details</li>
+         <li class = "list-group-item" ><button type="button" class="btn btn-danger btn-sm float-right delete">Danger</button></li>
       </ul>
-
-      
-<p id="myP">hello</p>
-<p id="myP2">sharpener</p>
-<div id="myDiv">This is an example div.</div>
+    
+     
     </section>
-  
+   
     
  <script>
   var form = document.getElementById('my-form');
   var itemlist  = document.getElementById('items');
-
+  
 form.addEventListener('submit',details);
 
 function details(e){
@@ -65,9 +64,23 @@ function details(e){
   
   li.appendChild(document.createTextNode(newItem));
   itemlist.appendChild(li);
-}
+  var deleteBtn = document.createElement('button');
+  deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+  deleteBtn.appendChild(document.createTextNode('delete'));
+  li.appendChild(deleteBtn);
+  itemList.appendChild(li);
+
 
   
+
+}
+var itemList  = document.getElementById('item');
+function removeItem(e){
+  if(e.target.classList.contains('delete')){
+      var li = e.target.parentElement;
+      itemList.removeChild(li);
+    }
+  }
  
  
  </script>
