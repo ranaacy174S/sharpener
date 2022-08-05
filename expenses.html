@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form id  ="form" type="form" >
+    <label >Expenses Amount</label>
+   <input id  = "input"  type="number" >
+    
+   <label> Description</label>
+   <input id  = "description" type ='text'>
+   <label>Categoty</label>
+    <select id = 'select'>
+        <option> fuel</option>
+        <option> movie</option>
+        <option> food</option>
+        <option> adventures</option>
+        <option> dancing</option>
+        <option> internet</option>
+        
+    </select>
+    <button >Add details</button>
+    <ul id="items" class="list-group">
+        <li class="list-group-item">showing...</li>
+    </ul>
+    
+   </form>
+<script>
+    var itemList = document.getElementById('items');
+var form = document.getElementById('form');
+form.addEventListener('submit',details);
+
+function details(e){
+    e.preventDefault();
+     var itms  = document.getElementById('input').value;
+     var li = document.createElement('li');
+  console.log(itms);
+
+   li.className  = "list-group-item";
+
+  li.appendChild(document.createTextNode(itms));
+  itemList.appendChild(li);
+  var desc = document.getElementById('description').value;
+
+  li.appendChild(document.createTextNode("  " +desc));
+  var sec = document.getElementById('select').value;
+  li.appendChild(document.createTextNode("  " +sec));
+
+  var deleteBtn = document.createElement('button');
+  deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+  deleteBtn.appendChild(document.createTextNode('Delete'));
+  li.appendChild(deleteBtn);
+  itemList.appendChild(li);
+  
+  //button 
+  var editbutton  = document.createElement('button');
+  editbutton.className  = 'btn btn-sm float-right edit';
+  editbutton.appendChild(document.createTextNode('Edit'));
+  li.appendChild(editbutton);
+  itemList.appendChild(li);
+ 
+      
+    var obj = {
+     itms:itms,
+       sec:sec,
+       desc:desc,
+     }
+     localStorage.setItem(itms,JSON.stringify(obj));  
+}
+
+itemList.addEventListener('click',removeItem);
+     function removeItem(e){
+        if(e.target.classList.contains('delete')){
+      var li = e.target.parentElement;
+      itemList.removeChild(li);
+    }
+     }
+     window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
+
+</script>
+</body>
+</html>
