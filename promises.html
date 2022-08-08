@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   const Posts = [
+    {  title : 'postone'  , body : 'this is first post'},
+    {  title : 'postwo'  , body : 'this is second post'}
+    
+   ]
+    function xyz(){
+        let res = '';
+       setTimeout(()=>{
+        
+           Posts.forEach((post,idx) => {
+                 res += `<li>${post.title}</li>`;
+           });
+          document.body.innerHTML = res;
+       } ,1000);
+      
+    }
+    function create(x){
+        return new  Promise((resolve, reject)=>{
+            setTimeout(()=>{
+          Posts.push(x);
+         const  error =  false;
+         if(false){
+resolve();
+         }
+         else reject('error: something went wrong');
+        },2000);
+        });
+    }
+
+
+  create({title :'post three' , body:'this is thirdpost'}).then(xyz).catch(err =>console.log(err));
+
+
+    </script>
+</body>
+</html>
