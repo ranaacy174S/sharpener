@@ -1,0 +1,134 @@
+  h3{
+
+    margin: 0 auto;
+
+  width: 400px;
+
+  }
+
+  p{
+
+    margin: 0 auto;
+
+  width: 400px;
+
+  
+
+  }
+
+body {
+
+  font-family: Arial;
+
+}
+
+input[type=datetime-local]{
+
+  width: 100%;
+
+  padding: 12px 20px;
+
+  margin: 8px 0;
+
+  display: block;
+
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+
+
+}
+
+input[type=submit] {
+
+  width: 100%;
+
+  padding: 12px 20px;
+
+  margin: 8px 0;
+
+  display: block;
+
+  background-color: #45a049;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  
+
+}
+
+
+
+input[type=text], select {
+
+  width: 100%;
+
+  padding: 12px 20px;
+
+  margin: 5px 0;
+
+  display: block;
+
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+}
+
+
+
+input[type=submit] {
+
+  top: 50%;
+
+  left: 50%;
+
+ 
+
+}
+
+
+
+input[type=submit]:hover {
+
+  background-color: #45a049;
+
+}
+
+form{
+
+  
+
+  margin: 0 auto;
+
+  width: 400px;
+
+  /* Form outline */
+
+  padding: 1em;
+
+  border: 1px solid rgb(197, 5, 101);
+
+  border-radius: 1em;
+
+}
+
+.background-image{
+
+
+
+        background-image : url('/pexels.jpg');
+
+        background-size: cover;
+
+          height: 100vh;
+
+}
+
